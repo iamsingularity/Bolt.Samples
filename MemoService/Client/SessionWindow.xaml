@@ -3,10 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="{Binding Path=User}" Height="378" Width="507">
     <Grid>
-        <ListBox Margin="10,62,10,10" ItemsSource="{Binding Path=Memos}"/>
+        <ListBox Margin="10,62,10,52" ItemsSource="{Binding Path=Memos}"/>
         <Label Content="Memo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="62,12,0,0" TextWrapping="Wrap" Text="{Binding Path=Memo, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <Button Content="Add" Command="{Binding Path=AddCommand}" HorizontalAlignment="Left" Margin="187,12,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Load" Command="{Binding Path=LoadCommand}" HorizontalAlignment="Left" Margin="267,12,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.493,0.364"/>
+        <Label Content="Retrieve Memos:" HorizontalAlignment="Left" Margin="10,0,0,21" Height="26" VerticalAlignment="Bottom"/>
+        <TextBox HorizontalAlignment="Left" Margin="113,0,0,22" TextWrapping="Wrap" Text="{Binding Path=Repeats}" Width="124" Height="23" VerticalAlignment="Bottom"/>
+        <Button Content="Test Performance" Command="{Binding Path=TestCommand}" HorizontalAlignment="Left" Margin="301,0,0,23" Width="131" Height="22" VerticalAlignment="Bottom"/>
+        <Label Content="times" HorizontalAlignment="Left" Margin="242,0,0,21" Height="26" VerticalAlignment="Bottom" Width="54"/>
     </Grid>
 </Window>

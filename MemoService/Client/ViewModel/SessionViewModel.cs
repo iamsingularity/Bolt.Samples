@@ -1,11 +1,14 @@
-using System;
-using System.Collections.ObjectModel;
 using Bolt.Client;
 using Client.Bolt;
 using Contract;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Server;
+using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace Client.ViewModel
 {
@@ -40,6 +43,25 @@ namespace Client.ViewModel
                 _proxy.AddMemo(Memo);
                 Memos.Add(Memo);
             }, () => !string.IsNullOrEmpty(Memo));
+
+            TestCommand = new RelayCommand(async () =>
+            {
+                int repeats = Repeats;
+
+                long elapsed = await Task.Run(() =>
+                {
+                    Stopwatch watch = Stopwatch.StartNew();
+
+                    for (int i = 0; i < repeats; i++)
+                    {
+                        _proxy.GetAllMemos();
+                    }
+
+                    return watch.ElapsedMilliseconds;
+                });
+
+                MessageBox.Show(string.Format("Requesting all memos {0} times has taken {1}ms.", repeats, elapsed), "Performance Result", MessageBoxButton.OK);
+            });
         }
 
         public ObservableCollection<string> Memos { get; set; }
@@ -60,6 +82,10 @@ namespace Client.ViewModel
         public RelayCommand AddCommand { get; set; }
 
         public RelayCommand LoadCommand { get; set; }
+
+        public RelayCommand TestCommand { get; set; }
+
+        public int Repeats { get; set; }
 
         public override void Cleanup()
         {
