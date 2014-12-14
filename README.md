@@ -5,7 +5,7 @@ The repository containing samples of Bolt based services.
 <https://github.com/justkao/Bolt.Samples/tree/master/BoltContactList>
 
 Example of simple Bolt based service.
-* **Client** - WPF application with multiple windows ( one window per session )
+* **Client** - WPF application
 * **Server** - Katana based host with Entity framework as database backend and Bolt for request handling
 * **Contract** - Interface that is describing the service
 ```
