@@ -1,0 +1,11 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Memo Service" Height="104.255" Width="326.064">
+    <Grid>
+        <Label Content="User:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="51,12,0,0" TextWrapping="Wrap" Text="{Binding Path=User, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Login" Command="{Binding Path=LoginCommand}"  HorizontalAlignment="Left" Margin="176,13,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
