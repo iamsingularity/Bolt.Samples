@@ -1,0 +1,12 @@
+﻿{
+    "assemblies": [ "Service.Contracts.dll" ],
+    "modifier": "internal",
+    "contracts": [
+        {
+            "contract": "Service.Contracts.IContactListProvider",
+            "client": { },
+            "server": { }
+        }
+    ]
+}
+
