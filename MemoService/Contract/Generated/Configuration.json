@@ -5,7 +5,8 @@
         {
             "contract": "Contract.IMemoService",
             "client": { },
-            "server": { }
+            "server": { },
+            "descriptor": { }
         }
     ]
 }
