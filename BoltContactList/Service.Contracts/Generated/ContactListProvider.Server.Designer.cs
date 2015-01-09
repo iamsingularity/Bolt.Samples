@@ -39,7 +39,7 @@ namespace Service.Contracts
             var instance = InstanceProvider.GetInstance<IContactListProvider>(context);
             try
             {
-                var result = await instance.GetContactsAsync(context.CallCancelled);
+                var result = await instance.GetContactsAsync(context.RequestAborted);
                 await ResponseHandler.Handle(context, result);
                 InstanceProvider.ReleaseInstance(context, instance, null);
             }
@@ -56,7 +56,7 @@ namespace Service.Contracts
             var instance = InstanceProvider.GetInstance<IContactListProvider>(context);
             try
             {
-                var result = await instance.AddContactAsync(parameters.Contact, context.CallCancelled);
+                var result = await instance.AddContactAsync(parameters.Contact, context.RequestAborted);
                 await ResponseHandler.Handle(context, result);
                 InstanceProvider.ReleaseInstance(context, instance, null);
             }
@@ -73,7 +73,7 @@ namespace Service.Contracts
             var instance = InstanceProvider.GetInstance<IContactListProvider>(context);
             try
             {
-                await instance.DeleteContactAsync(parameters.ContactId, context.CallCancelled);
+                await instance.DeleteContactAsync(parameters.ContactId, context.RequestAborted);
                 await ResponseHandler.Handle(context);
                 InstanceProvider.ReleaseInstance(context, instance, null);
             }
@@ -90,7 +90,7 @@ namespace Service.Contracts
             var instance = InstanceProvider.GetInstance<IContactListProvider>(context);
             try
             {
-                var result = instance.DoesContactExist(parameters.ContactId, context.CallCancelled);
+                var result = instance.DoesContactExist(parameters.ContactId, context.RequestAborted);
                 await ResponseHandler.Handle(context, result);
                 InstanceProvider.ReleaseInstance(context, instance, null);
             }

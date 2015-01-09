@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bolt.Core">
-      <HintPath>..\packages\Bolt.Core.0.9.0.2\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
+    <Reference Include="Bolt.Core, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Bolt.Core.0.9.1.1\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -48,10 +49,10 @@
     <None Include="Generated\Configuration.json" />
     <Compile Include="IContactListProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

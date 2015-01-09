@@ -5,7 +5,8 @@
         {
             "contract": "Service.Contracts.IContactListProvider",
             "client": { },
-            "server": { }
+            "server": { },
+            "descriptor": { }
         }
     ]
 }
