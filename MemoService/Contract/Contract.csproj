@@ -30,9 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bolt.Core, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bolt.Core, Version=0.10.0.0, Culture=neutral, PublicKeyToken=91c622221105d1b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bolt.Core.0.9.1.1\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
+      <HintPath>..\packages\Bolt.Core.0.10.0-alpha\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

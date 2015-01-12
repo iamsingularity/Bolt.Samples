@@ -34,17 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bolt.Client, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bolt.Client, Version=0.10.0.0, Culture=neutral, PublicKeyToken=91c622221105d1b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bolt.Client.0.9.1.1\lib\portable-net45+win+wpa81\Bolt.Client.dll</HintPath>
+      <HintPath>..\packages\Bolt.Client.0.10.0-alpha\lib\portable-net45+win+wpa81\Bolt.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Bolt.Core, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bolt.Core, Version=0.10.0.0, Culture=neutral, PublicKeyToken=91c622221105d1b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bolt.Core.0.9.1.1\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
+      <HintPath>..\packages\Bolt.Core.0.10.0-alpha\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Bolt.Helpers, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bolt.Helpers, Version=0.10.0.0, Culture=neutral, PublicKeyToken=91c622221105d1b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bolt.Helpers.0.9.1.1\lib\net45\Bolt.Helpers.dll</HintPath>
+      <HintPath>..\packages\Bolt.Helpers.0.10.0-alpha\lib\net45\Bolt.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>..\packages\MvvmLightLibs.5.0.2.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
@@ -60,7 +60,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
