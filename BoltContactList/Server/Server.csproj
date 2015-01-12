@@ -33,23 +33,25 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bolt.Core, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bolt.Core, Version=0.10.0.0, Culture=neutral, PublicKeyToken=91c622221105d1b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bolt.Core.0.9.1.1\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
+      <HintPath>..\packages\Bolt.Core.0.10.0-alpha\lib\portable-net45+win+wpa81\Bolt.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Bolt.Helpers, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bolt.Helpers, Version=0.10.0.0, Culture=neutral, PublicKeyToken=91c622221105d1b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bolt.Helpers.0.9.1.1\lib\net45\Bolt.Helpers.dll</HintPath>
+      <HintPath>..\packages\Bolt.Helpers.0.10.0-alpha\lib\net45\Bolt.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="Bolt.Server, Version=0.9.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bolt.Server, Version=0.10.0.0, Culture=neutral, PublicKeyToken=91c622221105d1b2, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Bolt.Server.0.9.1.1\lib\net45\Bolt.Server.dll</HintPath>
+      <HintPath>..\packages\Bolt.Server.0.10.0-alpha\lib\net45\Bolt.Server.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -69,7 +71,7 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
