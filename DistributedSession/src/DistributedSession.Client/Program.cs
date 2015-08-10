@@ -31,9 +31,11 @@ namespace DistributedSession.Client
 
         private static IDummyContract CreateProxy(ClientConfiguration configuration, IServerProvider serverProvider)
         {
-            IDummyContract proxy = configuration.CreateSessionProxy<IDummyContract>(serverProvider);
-            ((IChannel)proxy).Recoverable(10, TimeSpan.FromSeconds(2)).GetSessionChannel().WithDistributedSession();
-            return proxy;
+            return configuration.ProxyBuilder()
+                .UseSession(true)
+                .Recoverable(10, TimeSpan.FromSeconds(1))
+                .Url(serverProvider)
+                .Build<IDummyContract>();
         }
 
         public async Task TestProxy(IDummyContract proxy)
