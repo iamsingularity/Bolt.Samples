@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
 
 using Bolt.Client;
-using Bolt.Client.Channels;
-using Bolt.Client.Filters;
 using Bolt.Client.Proxy;
 
 using DistributedSession.Contract;
@@ -16,9 +13,7 @@ namespace DistributedSession.Client
         public void Main(string[] args)
         {
             IServerProvider serverProvider = new RandomServerProvider(new Uri("http://localhost:5000"), new Uri("http://localhost:5001"));
-            ClientConfiguration configuration = new ClientConfiguration()
-                .UseDynamicProxy()
-                .AddFilter<LogServerFilter>();
+            ClientConfiguration configuration = new ClientConfiguration().UseDynamicProxy();
 
             IDummyContract proxy1 = CreateProxy(configuration, serverProvider);
             TestProxy(proxy1).GetAwaiter().GetResult();
@@ -34,7 +29,20 @@ namespace DistributedSession.Client
             return configuration.ProxyBuilder()
                 .UseSession(true)
                 .Recoverable(10, TimeSpan.FromSeconds(1))
-                .Url(serverProvider)
+                .Url(serverProvider).OnSending(
+                    async (next, context) =>
+                        {
+                            Console.WriteLine("Sending request to server: {0}:{1}", context.Request.RequestUri.Host, context.Request.RequestUri.Port);
+                            try
+                            {
+                                await next(context);
+                            }
+                            catch (Exception)
+                            {
+                                Console.WriteLine("Failed to send request to server: {0}:{1}", context.Request.RequestUri.Host, context.Request.RequestUri.Port);
+                                throw;
+                            }
+                        })
                 .Build<IDummyContract>();
         }
 
@@ -77,23 +85,6 @@ namespace DistributedSession.Client
 
             public void OnServerUnavailable(Uri server)
             {
-            }
-        }
-
-        private class LogServerFilter : IClientExecutionFilter
-        {
-            public async Task ExecuteAsync(ClientActionContext context, Func<ClientActionContext, Task> next)
-            {
-                Console.WriteLine("Sending request to server: {0}:{1}", context.Request.RequestUri.Host, context.Request.RequestUri.Port);
-                try
-                {
-                    await next(context);
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Failed to send request to server: {0}:{1}", context.Request.RequestUri.Host, context.Request.RequestUri.Port);
-                    throw;
-                }
             }
         }
     }

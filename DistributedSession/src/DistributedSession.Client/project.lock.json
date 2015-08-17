@@ -3,14 +3,15 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "Bolt.Client/0.13.0-alpha1": {
+      "Bolt.Client/0.14.0-alpha1": {
         "dependencies": {
-          "Bolt.Core": "0.13.0-alpha1"
+          "Bolt.Core": "0.14.0-alpha1"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
           "mscorlib",
           "System",
+          "System.Collections.Concurrent",
           "System.Core",
           "System.Net.Http"
         ],
@@ -21,9 +22,9 @@
           "lib/dnx451/Bolt.Client.dll": {}
         }
       },
-      "Bolt.Client.Proxy/0.13.0-alpha1": {
+      "Bolt.Client.Proxy/0.14.0-alpha1": {
         "dependencies": {
-          "Bolt.Client": "0.13.0-alpha1",
+          "Bolt.Client": "0.14.0-alpha1",
           "Castle.Core": "3.3.3"
         },
         "frameworkAssemblies": [
@@ -39,7 +40,7 @@
           "lib/dnx451/Bolt.Client.Proxy.dll": {}
         }
       },
-      "Bolt.Core/0.13.0-alpha1": {
+      "Bolt.Core/0.14.0-alpha1": {
         "dependencies": {
           "Newtonsoft.Json": "6.0.8"
         },
@@ -48,6 +49,7 @@
           "mscorlib",
           "System",
           "System.Core",
+          "System.Net.Http",
           "System.Runtime.Serialization"
         ],
         "compile": {
@@ -76,11 +78,11 @@
     }
   },
   "libraries": {
-    "Bolt.Client/0.13.0-alpha1": {
-      "sha512": "34PJAn7ullNmQlL/02F9B5ew/BYrBKL2sJd5hHPxC6ky2snlh3q9wPl05dNPe4Y5EL4TgpZ1I0/3tw+TGXxGgA==",
+    "Bolt.Client/0.14.0-alpha1": {
+      "sha512": "+x+fF/0+k+XVk2M+Xz1Y7Artjsod8p+2rmax/UvccThRl9m0GdHDdZU1JTjF8NYfCRAyNUYF31s+OE7pXNe5oQ==",
       "files": [
-        "Bolt.Client.0.13.0-alpha1.nupkg",
-        "Bolt.Client.0.13.0-alpha1.nupkg.sha512",
+        "Bolt.Client.0.14.0-alpha1.nupkg",
+        "Bolt.Client.0.14.0-alpha1.nupkg.sha512",
         "Bolt.Client.nuspec",
         "lib/dnx451/Bolt.Client.dll",
         "lib/dnx451/Bolt.Client.xml",
@@ -90,11 +92,11 @@
         "lib/net45/Bolt.Client.xml"
       ]
     },
-    "Bolt.Client.Proxy/0.13.0-alpha1": {
-      "sha512": "y0kGt4hQpGVVkt/q+q/710EvlxdaoP0IrdiilE6QVQltX/oUcVgztxdG1VxkrQ5FdgLHoc6hbuIcKYlmZBIP7Q==",
+    "Bolt.Client.Proxy/0.14.0-alpha1": {
+      "sha512": "f5/mvCC794lwUYdvjUE+dVLE+LVlowJsgnQc741b2QoklhigRQ3Wck2qdO/h7kp/AwkKM9O2kIWffH6v/ZZIPA==",
       "files": [
-        "Bolt.Client.Proxy.0.13.0-alpha1.nupkg",
-        "Bolt.Client.Proxy.0.13.0-alpha1.nupkg.sha512",
+        "Bolt.Client.Proxy.0.14.0-alpha1.nupkg",
+        "Bolt.Client.Proxy.0.14.0-alpha1.nupkg.sha512",
         "Bolt.Client.Proxy.nuspec",
         "lib/dnx451/Bolt.Client.Proxy.dll",
         "lib/dnx451/Bolt.Client.Proxy.xml",
@@ -102,11 +104,11 @@
         "lib/net45/Bolt.Client.Proxy.xml"
       ]
     },
-    "Bolt.Core/0.13.0-alpha1": {
-      "sha512": "Q+HTjHODCbKFAtRhhNI7ARKSRp8Xizf5COG3BryAw/7Tr9uiDB9rpMVE1WW1XZpskiiCGwKdFQBREKGFn+mcVQ==",
+    "Bolt.Core/0.14.0-alpha1": {
+      "sha512": "0n17MD28iojWhYR8aVwWiFnZXMwUAO94unUKC83HA6LVieJVHmM0aR0Zc7z7sfPnfk2EkHK53/1F9geg7UVlXA==",
       "files": [
-        "Bolt.Core.0.13.0-alpha1.nupkg",
-        "Bolt.Core.0.13.0-alpha1.nupkg.sha512",
+        "Bolt.Core.0.14.0-alpha1.nupkg",
+        "Bolt.Core.0.14.0-alpha1.nupkg.sha512",
         "Bolt.Core.nuspec",
         "lib/dnx451/Bolt.Core.dll",
         "lib/dnx451/Bolt.Core.xml",
@@ -165,8 +167,8 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Bolt.Client >= 0.13.0-alpha1",
-      "Bolt.Client.Proxy >= 0.13.0-alpha1",
+      "Bolt.Client >= 0.14.0-alpha1",
+      "Bolt.Client.Proxy >= 0.14.0-alpha1",
       "DistributedSession.Contract "
     ],
     "DNX,Version=v4.5.1": []
