@@ -26,6 +26,11 @@ public interface IContactListProvider
     bool DoesContactExist(int contactId, CancellationToken cancellation);
 }
 ```
+#### DistributedSession
+<https://github.com/justkao/Bolt.Samples/tree/master/DistributedSession>
+
+Bolt based service with distributed and recoverable session support. Client is making
+requests to multiple Bolt servers to retrieve session specific data.
 
 #### MemoService
 <https://github.com/justkao/Bolt.Samples/tree/master/MemoService>
