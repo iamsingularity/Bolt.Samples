@@ -1,10 +1,11 @@
-﻿using Service.Contracts;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using ContactList.Contracts;
+using Microsoft.Data.Entity;
 
-namespace Server
+namespace ContactList.Server
 {
     /// <summary>
     /// Implementations of our service
@@ -24,7 +25,7 @@ namespace Server
         {
             using (ContactsDbContext ctxt = new ContactsDbContext())
             {
-                Contact result = ctxt.Contacts.Add(contact);
+                Contact result = ctxt.Contacts.Add(contact).Entity;
                 await ctxt.SaveChangesAsync(cancellation);
                 return result;
             }
@@ -34,7 +35,7 @@ namespace Server
         {
             using (ContactsDbContext ctxt = new ContactsDbContext())
             {
-                ctxt.Contacts.Remove(ctxt.Contacts.Attach(new Contact() { Id = contactId }));
+                ctxt.Contacts.Remove(ctxt.Contacts.Attach(new Contact() { Id = contactId }).Entity);
                 await ctxt.SaveChangesAsync(cancellation);
             }
         }
@@ -43,7 +44,15 @@ namespace Server
         {
             using (ContactsDbContext ctxt = new ContactsDbContext())
             {
-                return (ctxt.Contacts.Find(cancellation)) != null;
+                return (ctxt.Contacts.FirstOrDefault(c=>c.Id == contactId)) != null;
+            }
+        }
+
+        public async Task<bool> DoesContactExistAsync(int contactId, CancellationToken cancellation)
+        {
+            using (ContactsDbContext ctxt = new ContactsDbContext())
+            {
+                return (await ctxt.Contacts.FirstOrDefaultAsync(c => c.Id == contactId, cancellation)) != null;
             }
         }
     }

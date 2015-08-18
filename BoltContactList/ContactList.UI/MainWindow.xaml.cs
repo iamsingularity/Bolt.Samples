@@ -1,5 +1,5 @@
-﻿using Client.UI.ViewModel;
-using System.Windows;
+﻿using System.Windows;
+using ContactList.UI;
 
 namespace Client.UI
 {

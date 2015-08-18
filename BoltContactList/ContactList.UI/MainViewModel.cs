@@ -1,36 +1,31 @@
-using Bolt;
-using Bolt.Client;
-using Bolt.Helpers;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using Server;
-using Service.Contracts;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
+using Bolt.Client;
+using Bolt.Client.Proxy;
+using ContactList.Contracts;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
-namespace Client.UI.ViewModel
+namespace ContactList.UI
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly IContactListProviderAsync _proxy;
+        private readonly IContactListProvider _proxy;
         private Contact _selectedContact;
         private string _name;
         private string _surname;
 
         public MainViewModel()
         {
-            ISerializer serializer = new JsonSerializer();
+            ClientConfiguration clientConfiguration = new ClientConfiguration().UseDynamicProxy();
 
-            ClientConfiguration clientConfiguration = new ClientConfiguration(serializer,
-                new JsonExceptionSerializer(serializer), new DefaultWebRequestHandlerEx());
-
-            _proxy = clientConfiguration.CreateProxy<ContactListProviderProxy>(ServerConstants.ServerUrl);
+            _proxy = clientConfiguration.CreateProxy<IContactListProvider>("http://localhost:5000");
             Contacts = new ObservableCollection<Contact>();
 
             AddContactCommand = new RelayCommand(async () =>
             {
-                Contact contact = await _proxy.AddContactAsync(new Contact() { Name = Name, Surname = Surname }, CancellationToken.None);
+                Contact contact = await _proxy.AddContactAsync(new Contact { Name = Name, Surname = Surname }, CancellationToken.None);
                 Contacts.Add(contact);
             }, () => !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(Surname));
 

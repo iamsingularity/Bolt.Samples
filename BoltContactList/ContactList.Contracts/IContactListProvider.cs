@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Bolt;
 
-namespace Service.Contracts
+namespace ContactList.Contracts
 {
     public interface IContactListProvider
     {
@@ -13,7 +12,8 @@ namespace Service.Contracts
 
         Task DeleteContactAsync(int contactId, CancellationToken cancellation);
 
-        [AsyncOperation]
         bool DoesContactExist(int contactId, CancellationToken cancellation);
+
+        Task<bool> DoesContactExistAsync(int contactId, CancellationToken cancellation);
     }
 }
