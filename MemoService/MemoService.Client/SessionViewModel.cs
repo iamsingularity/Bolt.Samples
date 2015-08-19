@@ -1,30 +1,33 @@
-using Bolt.Client;
-using Client.Bolt;
-using Contract;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
-using Server;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Client.ViewModel
+using Bolt.Client;
+
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+
+using MemoService.Contracts;
+
+namespace MemoService.Client
 {
     public class SessionViewModel : ViewModelBase
     {
-        private readonly ClientConfiguration _configuration;
-        private IMemoService _proxy;
+        private readonly IMemoService _proxy;
         private string _memo;
 
         public SessionViewModel(string user, ClientConfiguration configuration)
         {
             User = user;
-            _configuration = configuration;
             _proxy =
-                _configuration.CreateProxy<MemoServiceProxy>(new MemoServiceChannel(user, new Uri(ServerConstants.ServerUrl),
-                    configuration));
+                configuration.ProxyBuilder()
+                    .Url("http://localhost:5000")
+                    .UseSession()
+                    .Recoverable(10, TimeSpan.FromSeconds(1))
+                    .Build<IMemoService>();
+            _proxy.Login(user);
 
             Memos = new ObservableCollection<string>();
 
@@ -89,7 +92,7 @@ namespace Client.ViewModel
 
         public override void Cleanup()
         {
-            ((IDisposable)_proxy).Dispose();
+            (_proxy as IDisposable)?.Dispose();
             base.Cleanup();
         }
     }

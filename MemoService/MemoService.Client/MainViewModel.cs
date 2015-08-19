@@ -1,8 +1,11 @@
 using Bolt.Client;
+
+using Client;
+
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 
-namespace Client.ViewModel
+namespace MemoService.Client
 {
     public class MainViewModel : ViewModelBase
     {
@@ -12,19 +15,13 @@ namespace Client.ViewModel
         public MainViewModel(ClientConfiguration configuration)
         {
             _configuration = configuration;
-
             LoginCommand = new RelayCommand(() =>
             {
-
                 SessionViewModel vm = new SessionViewModel(User, _configuration);
-                SessionWindow w = new SessionWindow();
-                w.Width = 640;
-                w.Height = 480;
-                w.DataContext = vm;
+                SessionWindow w = new SessionWindow { Width = 640, Height = 480, DataContext = vm };
                 w.Show();
 
             }, () => !string.IsNullOrEmpty(User));
-
         }
 
         public string User

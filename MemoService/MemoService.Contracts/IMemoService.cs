@@ -1,7 +1,7 @@
 ﻿using Bolt;
 using System.Collections.Generic;
 
-namespace Contract
+namespace MemoService.Contracts
 {
     public interface IMemoService
     {
@@ -14,7 +14,7 @@ namespace Contract
 
         List<string> GetAllMemos();
 
-        [CloseSession]
+        [DestroySession]
         void Logoff();
     }
 }

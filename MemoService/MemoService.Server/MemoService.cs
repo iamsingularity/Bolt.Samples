@@ -1,7 +1,8 @@
-﻿using Contract;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Server
+using MemoService.Contracts;
+
+namespace MemoService.Server
 {
     public class MemoService : IMemoService
     {

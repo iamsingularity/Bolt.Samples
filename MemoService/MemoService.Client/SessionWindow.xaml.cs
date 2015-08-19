@@ -1,6 +1,7 @@
-﻿using Client.ViewModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Windows;
+
+using MemoService.Client;
 
 namespace Client
 {

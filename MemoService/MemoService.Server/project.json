@@ -1,0 +1,18 @@
+﻿{
+  "version": "1.0.0-*",
+  "compileFiles": [ "..\\MemoService.Contracts\\IMemoService.cs" ],
+  "dependencies": {
+    "Microsoft.AspNet.Server.WebListener": "1.0.0-*",
+    "Microsoft.Framework.Logging.Console": "1.0.0-*",
+    "Microsoft.AspNet.Hosting": "1.0.0-*",
+    "Bolt.Server": "0.16.0-alpha1",
+    "EntityFramework.InMemory": "7.0.0-*"
+  },
+  "frameworks": {
+    "dnx451": {
+    }
+  },
+  "commands": {
+    "run": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+  }
+}
