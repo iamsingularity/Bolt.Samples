@@ -2,19 +2,18 @@
   "webroot": "wwwroot",
   "version": "1.0.0-*",
   "dependencies": {
-    "Microsoft.AspNet.Server.IIS": "1.0.0-*",
-    "Microsoft.AspNet.Server.WebListener": "1.0.0-*",
-    "Microsoft.Framework.Caching.Abstractions": "1.0.0-*",
-    "Microsoft.Framework.Caching.SqlServer": "1.0.0-*",
-    "Microsoft.Framework.Caching.SqlConfig": "1.0.0-*",
-    "Microsoft.Framework.OptionsModel": "1.0.0-*",
-    "Bolt.Server": "0.14.0-alpha1",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
+    "Microsoft.Extensions.Caching.Abstractions": "1.0.0-*",
+    "Microsoft.Extensions.Caching.SqlServer": "1.0.0-*",
+    "Microsoft.Extensions.Caching.SqlConfig": "1.0.0-*",
+    "Microsoft.Extensions.OptionsModel": "1.0.0-*",
+    "Bolt.Server": "0.20.0-alpha1",
     "DistributedSession.Contract": ""
   },
   "commands": {
-    "web1": "Microsoft.AspNet.Hosting --config hosting1.ini",
-    "web2": "Microsoft.AspNet.Hosting --config hosting2.ini",
-    "db": "Microsoft.Framework.Caching.SqlConfig create \"Server=localhost;Database=BoltDistributedCachedTestDb;user=sa;password=sa;\" dbo Entries"
+    "web1": "Microsoft.AspNet.Hosting --config hosting1.json",
+    "web2": "Microsoft.AspNet.Hosting --config hosting2.json",
+    "db": "Microsoft.Extensions.Caching.SqlConfig create \"Server=localhost;Database=BoltDistributedCachedTestDb;user=sa;password=sa;\" dbo Entries"
   },
   "frameworks": {
     "dnx451": { }

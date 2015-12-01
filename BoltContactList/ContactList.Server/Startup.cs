@@ -1,10 +1,9 @@
-﻿using System;
-using Bolt.Server;
+﻿using Bolt.Server;
 using ContactList.Contracts;
 using Microsoft.AspNet.Builder;
 using Microsoft.Data.Entity;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.Framework.Logging;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace ContactList.Server
 {

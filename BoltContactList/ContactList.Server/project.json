@@ -1,18 +1,18 @@
-﻿{
+{
   "version": "1.0.0-*",
-  "compileFiles": [ "..\\ContactList.Contracts\\Contact.cs", "..\\ContactList.Contracts\\IContactListProvider.cs"],
+  "compileFiles": [ "..\\ContactList.Contracts\\Contact.cs", "..\\ContactList.Contracts\\IContactListProvider.cs" ],
   "dependencies": {
-    "Microsoft.AspNet.Server.WebListener": "1.0.0-*",
-    "Microsoft.Framework.Logging.Console": "1.0.0-*",
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-*",
     "Microsoft.AspNet.Hosting": "1.0.0-*",
-    "Bolt.Server": "0.15.0-*",
+    "Bolt.Server": "0.20.0-*",
     "EntityFramework.InMemory": "7.0.0-*"
+  },
+  "commands": {
+    "run": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:5000"
   },
   "frameworks": {
     "dnx451": {
     }
-  },
-  "commands": {
-    "run": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
   }
 }

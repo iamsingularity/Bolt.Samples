@@ -1,8 +1,6 @@
-﻿using System.Net.Http;
-using System.Threading;
-using Bolt;
+﻿using System.Threading;
+
 using Bolt.Client;
-using Bolt.Client.Pipeline;
 using Bolt.Client.Proxy;
 using ContactList.Contracts;
 

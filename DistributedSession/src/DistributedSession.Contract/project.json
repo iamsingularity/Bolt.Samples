@@ -6,6 +6,6 @@
   "projectUrl": "",
   "licenseUrl": "",
   "frameworks": {
-    "dnx451": { }
+    "net451": { }
   }
 }
