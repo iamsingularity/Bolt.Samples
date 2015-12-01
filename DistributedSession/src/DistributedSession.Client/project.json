@@ -6,8 +6,7 @@
   "projectUrl": "",
   "licenseUrl": "",
   "dependencies": {
-    "Bolt.Client": "0.14.0-alpha1",
-    "Bolt.Client.Proxy": "0.14.0-alpha1",
+    "Bolt.Client.Proxy": "0.19.0-alpha1",
     "DistributedSession.Contract": ""
   },
 

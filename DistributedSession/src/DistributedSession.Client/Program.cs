@@ -8,9 +8,9 @@ using DistributedSession.Contract;
 
 namespace DistributedSession.Client
 {
-    public class Program
+    public static class Program
     {
-        public void Main(string[] args)
+        public static void Main(string[] args)
         {
             IServerProvider serverProvider = new RandomServerProvider(new Uri("http://localhost:5000"), new Uri("http://localhost:5001"));
             ClientConfiguration configuration = new ClientConfiguration().UseDynamicProxy();
@@ -46,7 +46,7 @@ namespace DistributedSession.Client
                 .Build<IDummyContract>();
         }
 
-        public async Task TestProxy(IDummyContract proxy)
+        public static async Task TestProxy(IDummyContract proxy)
         {
             Console.WriteLine("Sending {0} requests to multiple servers with session", 10);
 

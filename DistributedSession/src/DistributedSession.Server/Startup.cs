@@ -3,9 +3,9 @@
 using DistributedSession.Contract;
 
 using Microsoft.AspNet.Builder;
-using Microsoft.Framework.Caching.Distributed;
-using Microsoft.Framework.DependencyInjection;
-using Microsoft.Framework.Logging;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace DistributedSession.Server
 {
