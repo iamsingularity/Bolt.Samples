@@ -35,11 +35,10 @@ requests to multiple Bolt servers to retrieve session specific data.
 #### MemoService
 <https://github.com/justkao/Bolt.Samples/tree/master/MemoService>
 
-Bolt based service with session support that is using protocol buffer serialization for transport.
+Bolt based service with in-memory session support.
 
-* **Client** - WPF application with multiple windows ( one window per session )
-* **Server** - Katana based host with Bolt integration
-* **Contract**
+* **MemoService.Client** - WPF application with multiple windows ( one window per session )
+* **MemoService.Server** - ASP.NET based server using Bolt middleware 
 ```c#
 public interface IMemoService
 {
@@ -52,7 +51,7 @@ public interface IMemoService
 
     List<string> GetAllMemos();
 
-    [CloseSession]
+    [DestroySession]
     void Logoff();
 }
 ``` 
