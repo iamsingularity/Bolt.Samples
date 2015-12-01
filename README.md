@@ -1,6 +1,10 @@
 ### Bolt.Samples
 The repository containing samples of Bolt based services.
 
+#### Bolt.Console.Sample
+<https://github.com/justkao/Bolt.Samples/tree/master/Bolt.Console.Sample>
+Simple console Bolt server with client-side testing code running on ASP.NET5 - RC1 
+
 #### BoltContactList
 <https://github.com/justkao/Bolt.Samples/tree/master/BoltContactList>
 
