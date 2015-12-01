@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C6784105-623C-4EA9-8593-138C603723F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A675E0E7-F423-4DB5-A8C3-11061B27C5DC}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Bolt.Console.Sample", "src\Bolt.Console.Sample\Bolt.Console.Sample.xproj", "{A096B555-6B12-4DDD-B5B7-95440A215572}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A096B555-6B12-4DDD-B5B7-95440A215572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A096B555-6B12-4DDD-B5B7-95440A215572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A096B555-6B12-4DDD-B5B7-95440A215572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A096B555-6B12-4DDD-B5B7-95440A215572}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A096B555-6B12-4DDD-B5B7-95440A215572} = {C6784105-623C-4EA9-8593-138C603723F5}
+	EndGlobalSection
+EndGlobal
