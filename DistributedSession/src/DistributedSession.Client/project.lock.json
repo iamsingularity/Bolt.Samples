@@ -1,30 +1,31 @@
 {
   "locked": false,
-  "version": 1,
+  "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "Bolt.Client/0.14.0-alpha1": {
+      "Bolt.Client/0.19.0-alpha1": {
+        "type": "package",
         "dependencies": {
-          "Bolt.Core": "0.14.0-alpha1"
+          "Bolt.Core": "0.19.0-alpha1"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
           "mscorlib",
           "System",
-          "System.Collections.Concurrent",
           "System.Core",
           "System.Net.Http"
         ],
         "compile": {
-          "lib/dnx451/Bolt.Client.dll": {}
+          "lib/net451/Bolt.Client.dll": {}
         },
         "runtime": {
-          "lib/dnx451/Bolt.Client.dll": {}
+          "lib/net451/Bolt.Client.dll": {}
         }
       },
-      "Bolt.Client.Proxy/0.14.0-alpha1": {
+      "Bolt.Client.Proxy/0.19.0-alpha1": {
+        "type": "package",
         "dependencies": {
-          "Bolt.Client": "0.14.0-alpha1",
+          "Bolt.Client": "0.19.0-alpha1",
           "Castle.Core": "3.3.3"
         },
         "frameworkAssemblies": [
@@ -34,15 +35,16 @@
           "System.Core"
         ],
         "compile": {
-          "lib/dnx451/Bolt.Client.Proxy.dll": {}
+          "lib/net451/Bolt.Client.Proxy.dll": {}
         },
         "runtime": {
-          "lib/dnx451/Bolt.Client.Proxy.dll": {}
+          "lib/net451/Bolt.Client.Proxy.dll": {}
         }
       },
-      "Bolt.Core/0.14.0-alpha1": {
+      "Bolt.Core/0.19.0-alpha1": {
+        "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "6.0.8"
+          "Newtonsoft.Json": "7.0.1"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -53,13 +55,14 @@
           "System.Runtime.Serialization"
         ],
         "compile": {
-          "lib/dnx451/Bolt.Core.dll": {}
+          "lib/net451/Bolt.Core.dll": {}
         },
         "runtime": {
-          "lib/dnx451/Bolt.Core.dll": {}
+          "lib/net451/Bolt.Core.dll": {}
         }
       },
       "Castle.Core/3.3.3": {
+        "type": "package",
         "compile": {
           "lib/net45/Castle.Core.dll": {}
         },
@@ -67,7 +70,176 @@
           "lib/net45/Castle.Core.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.8": {
+      "DistributedSession.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.1/win7-x86": {
+      "Bolt.Client/0.19.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Bolt.Core": "0.19.0-alpha1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net451/Bolt.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Bolt.Client.dll": {}
+        }
+      },
+      "Bolt.Client.Proxy/0.19.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Bolt.Client": "0.19.0-alpha1",
+          "Castle.Core": "3.3.3"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Bolt.Client.Proxy.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Bolt.Client.Proxy.dll": {}
+        }
+      },
+      "Bolt.Core/0.19.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net451/Bolt.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Bolt.Core.dll": {}
+        }
+      },
+      "Castle.Core/3.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
+      },
+      "DistributedSession.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      }
+    },
+    "DNX,Version=v4.5.1/win7-x64": {
+      "Bolt.Client/0.19.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Bolt.Core": "0.19.0-alpha1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net451/Bolt.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Bolt.Client.dll": {}
+        }
+      },
+      "Bolt.Client.Proxy/0.19.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Bolt.Client": "0.19.0-alpha1",
+          "Castle.Core": "3.3.3"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Bolt.Client.Proxy.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Bolt.Client.Proxy.dll": {}
+        }
+      },
+      "Bolt.Core/0.19.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Runtime.Serialization"
+        ],
+        "compile": {
+          "lib/net451/Bolt.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Bolt.Core.dll": {}
+        }
+      },
+      "Castle.Core/3.3.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Castle.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Castle.Core.dll": {}
+        }
+      },
+      "DistributedSession.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.5.1"
+      },
+      "Newtonsoft.Json/7.0.1": {
+        "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
         },
@@ -78,47 +250,49 @@
     }
   },
   "libraries": {
-    "Bolt.Client/0.14.0-alpha1": {
-      "sha512": "+x+fF/0+k+XVk2M+Xz1Y7Artjsod8p+2rmax/UvccThRl9m0GdHDdZU1JTjF8NYfCRAyNUYF31s+OE7pXNe5oQ==",
+    "DistributedSession.Contract/1.0.0": {
+      "type": "project",
+      "path": "../DistributedSession.Contract/project.json"
+    },
+    "Bolt.Client/0.19.0-alpha1": {
+      "type": "package",
+      "sha512": "2jwux05A8w8UUj08a9WSs5yR02F8+NHL9r11cNfD2Eir5XDf3woN14gTn+caGEBu70pwV36Ri+ad50QJn2g7mA==",
       "files": [
-        "Bolt.Client.0.14.0-alpha1.nupkg",
-        "Bolt.Client.0.14.0-alpha1.nupkg.sha512",
+        "Bolt.Client.0.19.0-alpha1.nupkg",
+        "Bolt.Client.0.19.0-alpha1.nupkg.sha512",
         "Bolt.Client.nuspec",
-        "lib/dnx451/Bolt.Client.dll",
-        "lib/dnx451/Bolt.Client.xml",
-        "lib/dotnet/Bolt.Client.dll",
-        "lib/dotnet/Bolt.Client.xml",
-        "lib/net45/Bolt.Client.dll",
-        "lib/net45/Bolt.Client.xml"
+        "lib/dotnet5.4/Bolt.Client.dll",
+        "lib/dotnet5.4/Bolt.Client.xml",
+        "lib/net451/Bolt.Client.dll",
+        "lib/net451/Bolt.Client.xml"
       ]
     },
-    "Bolt.Client.Proxy/0.14.0-alpha1": {
-      "sha512": "f5/mvCC794lwUYdvjUE+dVLE+LVlowJsgnQc741b2QoklhigRQ3Wck2qdO/h7kp/AwkKM9O2kIWffH6v/ZZIPA==",
+    "Bolt.Client.Proxy/0.19.0-alpha1": {
+      "type": "package",
+      "sha512": "FU8ZEDKiRhIqlcZGy8od6YXS6gfU0qQT7roG9qqqocOj7LEoz2uyuYAYhSntguMPTEe3qf8Lfqc/s5RrdZOFeQ==",
       "files": [
-        "Bolt.Client.Proxy.0.14.0-alpha1.nupkg",
-        "Bolt.Client.Proxy.0.14.0-alpha1.nupkg.sha512",
+        "Bolt.Client.Proxy.0.19.0-alpha1.nupkg",
+        "Bolt.Client.Proxy.0.19.0-alpha1.nupkg.sha512",
         "Bolt.Client.Proxy.nuspec",
-        "lib/dnx451/Bolt.Client.Proxy.dll",
-        "lib/dnx451/Bolt.Client.Proxy.xml",
-        "lib/net45/Bolt.Client.Proxy.dll",
-        "lib/net45/Bolt.Client.Proxy.xml"
+        "lib/net451/Bolt.Client.Proxy.dll",
+        "lib/net451/Bolt.Client.Proxy.xml"
       ]
     },
-    "Bolt.Core/0.14.0-alpha1": {
-      "sha512": "0n17MD28iojWhYR8aVwWiFnZXMwUAO94unUKC83HA6LVieJVHmM0aR0Zc7z7sfPnfk2EkHK53/1F9geg7UVlXA==",
+    "Bolt.Core/0.19.0-alpha1": {
+      "type": "package",
+      "sha512": "DoZASaWqclZ5Lr0jZhxN5spY4V76Q5bDtS7TiuwcWSWYUn3zU4n6Fmkc7BmWzvK/bCxKbixOpIEM9tZk5DUCnw==",
       "files": [
-        "Bolt.Core.0.14.0-alpha1.nupkg",
-        "Bolt.Core.0.14.0-alpha1.nupkg.sha512",
+        "Bolt.Core.0.19.0-alpha1.nupkg",
+        "Bolt.Core.0.19.0-alpha1.nupkg.sha512",
         "Bolt.Core.nuspec",
-        "lib/dnx451/Bolt.Core.dll",
-        "lib/dnx451/Bolt.Core.xml",
-        "lib/dotnet/Bolt.Core.dll",
-        "lib/dotnet/Bolt.Core.xml",
-        "lib/net45/Bolt.Core.dll",
-        "lib/net45/Bolt.Core.xml"
+        "lib/dotnet5.4/Bolt.Core.dll",
+        "lib/dotnet5.4/Bolt.Core.xml",
+        "lib/net451/Bolt.Core.dll",
+        "lib/net451/Bolt.Core.xml"
       ]
     },
     "Castle.Core/3.3.3": {
+      "type": "package",
       "sha512": "tvVrLbHhtAGubUUDbEkH9JlivdlJOTI25u3hlyHpPxuJdTVi/yVQKWCYvGpafGPm7G1ibdWj4brqhtSQkAmN+g==",
       "files": [
         "ASL - Apache Software Foundation License.txt",
@@ -141,8 +315,9 @@
         "readme.txt"
       ]
     },
-    "Newtonsoft.Json/6.0.8": {
-      "sha512": "7ut47NDedTW19EbL0JpFDYUP62fcuz27hJrehCDNajdCS5NtqL+E39+7Um3OkNc2wl2ym7K8Ln5eNuLus6mVGQ==",
+    "Newtonsoft.Json/7.0.1": {
+      "type": "package",
+      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -152,14 +327,12 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
-        "lib/netcore45/Newtonsoft.Json.dll",
-        "lib/netcore45/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.6.0.8.nupkg",
-        "Newtonsoft.Json.6.0.8.nupkg.sha512",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.7.0.1.nupkg",
+        "Newtonsoft.Json.7.0.1.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
       ]
@@ -167,8 +340,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Bolt.Client >= 0.14.0-alpha1",
-      "Bolt.Client.Proxy >= 0.14.0-alpha1",
+      "Bolt.Client.Proxy >= 0.19.0-alpha1",
       "DistributedSession.Contract "
     ],
     "DNX,Version=v4.5.1": []

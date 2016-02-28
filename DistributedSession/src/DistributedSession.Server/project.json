@@ -7,7 +7,7 @@
     "Microsoft.Extensions.Caching.SqlServer": "1.0.0-*",
     "Microsoft.Extensions.Caching.SqlConfig": "1.0.0-*",
     "Microsoft.Extensions.OptionsModel": "1.0.0-*",
-    "Bolt.Server": "0.20.0-alpha1",
+    "Bolt.Server": "0.21.0-alpha1",
     "DistributedSession.Contract": ""
   },
   "commands": {

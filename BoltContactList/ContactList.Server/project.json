@@ -5,8 +5,10 @@
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
     "Microsoft.Extensions.Logging.Console": "1.0.0-*",
     "Microsoft.AspNet.Hosting": "1.0.0-*",
-    "Bolt.Server": "0.20.0-*",
-    "EntityFramework.InMemory": "7.0.0-*"
+    "EntityFramework.InMemory": "7.0.0-*",
+    "Bolt.Client": "0.21.0-alpha1",
+    "Bolt.Core": "0.21.0-alpha1",
+    "Bolt.Server": "0.21.0-alpha1"
   },
   "commands": {
     "run": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:5000"

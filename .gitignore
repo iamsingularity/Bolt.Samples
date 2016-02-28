@@ -28,3 +28,4 @@ nuget.exe
 *.dll
 *.nupkg
 /src/Bolt.Console/tools/
+/tools/Cake
