@@ -11,6 +11,7 @@ var configuration = Argument<string>("configuration", "Release");
 
 var solutions = GetFiles("./**/*.sln");
 var solutionPaths = solutions.Select(solution => solution.GetDirectory());
+var nugetFeed = "https://api.nuget.org/v3/index.json";
 
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
@@ -47,6 +48,15 @@ Task("Clean")
 Task("Restore")
     .Does(() =>
 {
+    var settings = new DNURestoreSettings
+    {
+        Parallel = true,
+        Locked = DNULocked.Lock,
+        Sources = new [] { nugetFeed },
+        Quiet = true
+    };            
+    DNURestore(settings);
+
     // Restore all NuGet packages.
     foreach(var solution in solutions)
     {
