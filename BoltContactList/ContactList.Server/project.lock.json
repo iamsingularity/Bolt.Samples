@@ -3,10 +3,36 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "Bolt.Client/0.21.0-alpha1": {
+      "Bolt.Core/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
-          "Bolt.Core": "0.21.0-alpha1"
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Runtime.Serialization"
+        ]
+      },
+      "Bolt.Server/0.30.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Bolt.Core": "0.30.0-alpha1",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Routing": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Session": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "7.0.1"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -272,6 +298,26 @@
           "lib/net451/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
+      "Microsoft.AspNet.Routing/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Routing.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Routing.dll": {}
+        }
+      },
       "Microsoft.AspNet.Server.Kestrel/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -290,6 +336,27 @@
         },
         "runtime": {
           "lib/dnx451/Microsoft.AspNet.Server.Kestrel.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
         }
       },
       "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
@@ -663,7 +730,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/7.0.1": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -742,10 +809,36 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
-      "Bolt.Client/0.21.0-alpha1": {
+      "Bolt.Core/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
-          "Bolt.Core": "0.21.0-alpha1"
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Runtime.Serialization"
+        ]
+      },
+      "Bolt.Server/0.30.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Bolt.Core": "0.30.0-alpha1",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Routing": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Session": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "7.0.1"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -1011,6 +1104,26 @@
           "lib/net451/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
+      "Microsoft.AspNet.Routing/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Routing.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Routing.dll": {}
+        }
+      },
       "Microsoft.AspNet.Server.Kestrel/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -1032,6 +1145,27 @@
         },
         "native": {
           "runtimes/win7-x86/native/libuv.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
         }
       },
       "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
@@ -1405,7 +1539,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/7.0.1": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -1484,10 +1618,36 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
-      "Bolt.Client/0.21.0-alpha1": {
+      "Bolt.Core/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
-          "Bolt.Core": "0.21.0-alpha1"
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core",
+          "System.Net.Http",
+          "System.Runtime.Serialization"
+        ]
+      },
+      "Bolt.Server/0.30.0-alpha1": {
+        "type": "package",
+        "dependencies": {
+          "Bolt.Core": "0.30.0-alpha1",
+          "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Routing": "1.0.0-rc1-final",
+          "Microsoft.AspNet.Session": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Configuration.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Primitives": "1.0.0-rc1-final",
+          "Newtonsoft.Json": "7.0.1"
         },
         "frameworkAssemblies": [
           "Microsoft.CSharp",
@@ -1753,6 +1913,26 @@
           "lib/net451/Microsoft.AspNet.Http.Features.dll": {}
         }
       },
+      "Microsoft.AspNet.Routing/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Routing.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Routing.dll": {}
+        }
+      },
       "Microsoft.AspNet.Server.Kestrel/1.0.0-rc1-final": {
         "type": "package",
         "dependencies": {
@@ -1774,6 +1954,27 @@
         },
         "native": {
           "runtimes/win7-x64/native/libuv.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc1-final",
+          "Microsoft.Extensions.OptionsModel": "1.0.0-rc1-final"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "mscorlib",
+          "System",
+          "System.Core"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
         }
       },
       "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
@@ -2147,7 +2348,7 @@
           "lib/net451/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Newtonsoft.Json/6.0.6": {
+      "Newtonsoft.Json/7.0.1": {
         "type": "package",
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
@@ -2227,17 +2428,38 @@
     }
   },
   "libraries": {
-    "Bolt.Client/0.21.0-alpha1": {
+    "Bolt.Core/0.30.0-alpha1": {
       "type": "package",
-      "sha512": "Oz0RLfeOtgKr8e5zBgx8QyLKc0xqKBq6+L/sCCT0t2HuAQt4UGFieUJzZaMKcKr1Nbh25j7uu8x0jhTZ+T3q/g==",
+      "sha512": "yh1zsvcwv2iLa4a1HmJryPqD8ToeYw5Ni1HgEloyNJiEah8R4yqjBhtGfSVy7kP4W0SHcW+o/Ct2iROcfYXd4A==",
       "files": [
-        "Bolt.Client.0.21.0-alpha1.nupkg",
-        "Bolt.Client.0.21.0-alpha1.nupkg.sha512",
-        "Bolt.Client.nuspec",
-        "lib/dotnet5.4/dotnet5.4/Bolt.Client.dll",
-        "lib/dotnet5.4/dotnet5.4/Bolt.Client.xml",
+        "Bolt.Core.0.30.0-alpha1.nupkg",
+        "Bolt.Core.0.30.0-alpha1.nupkg.sha512",
+        "Bolt.Core.nuspec",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.dll",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.xml",
         "lib/net451/net451/Bolt.Client.dll",
-        "lib/net451/net451/Bolt.Client.xml"
+        "lib/net451/net451/Bolt.Client.xml",
+        "lib/net451/net451/Bolt.Core.dll",
+        "lib/net451/net451/Bolt.Core.xml"
+      ]
+    },
+    "Bolt.Server/0.30.0-alpha1": {
+      "type": "package",
+      "sha512": "yDW8Lqk0VyeyvDIaM2+hc1a8hNBZoldRBFKbpWEZrFPX8cUb+atJVVKRn5bjSQ6GlaAWN/XaahBSwaTi49GGGg==",
+      "files": [
+        "Bolt.Server.0.30.0-alpha1.nupkg",
+        "Bolt.Server.0.30.0-alpha1.nupkg.sha512",
+        "Bolt.Server.nuspec",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.dll",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.xml",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Server.dll",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Server.xml",
+        "lib/net451/net451/Bolt.Client.dll",
+        "lib/net451/net451/Bolt.Client.xml",
+        "lib/net451/net451/Bolt.Core.dll",
+        "lib/net451/net451/Bolt.Core.xml",
+        "lib/net451/net451/Bolt.Server.dll",
+        "lib/net451/net451/Bolt.Server.xml"
       ]
     },
     "EntityFramework.Core/7.0.0-rc1-final": {
@@ -2419,6 +2641,20 @@
         "Microsoft.AspNet.Http.Features.nuspec"
       ]
     },
+    "Microsoft.AspNet.Routing/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "kIDLp1Icd+l2Z5jFGZf5rAKALS2btMKdP+a+zOepiE4oZJCAJ5tWms+MyMkMJ8hD9/5O6fF4CzckBBcA6pxNUQ==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.AspNet.Routing.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.Routing.xml",
+        "lib/net451/Microsoft.AspNet.Routing.dll",
+        "lib/net451/Microsoft.AspNet.Routing.xml",
+        "Microsoft.AspNet.Routing.1.0.0-rc1-final.nupkg",
+        "Microsoft.AspNet.Routing.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.AspNet.Routing.nuspec"
+      ]
+    },
     "Microsoft.AspNet.Server.Kestrel/1.0.0-rc1-final": {
       "type": "package",
       "serviceable": true,
@@ -2440,6 +2676,20 @@
         "runtimes/win7-x64/native/libuv.dll",
         "runtimes/win7-x86/native/libuv.dll",
         "thirdpartynotices.txt"
+      ]
+    },
+    "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "nMImkPMx/z4YL/bCBaTywQZD28sg6IvWMRckzY4hMZuhhRWr4z3HHYgORCaKbJQH3nJkfL6rb+TpmWobN9gKpw==",
+      "files": [
+        "lib/dotnet5.4/Microsoft.AspNet.Session.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.Session.xml",
+        "lib/net451/Microsoft.AspNet.Session.dll",
+        "lib/net451/Microsoft.AspNet.Session.xml",
+        "Microsoft.AspNet.Session.1.0.0-rc1-final.nupkg",
+        "Microsoft.AspNet.Session.1.0.0-rc1-final.nupkg.sha512",
+        "Microsoft.AspNet.Session.nuspec"
       ]
     },
     "Microsoft.AspNet.WebUtilities/1.0.0-rc1-final": {
@@ -2768,9 +3018,9 @@
         "Microsoft.Net.Http.Headers.nuspec"
       ]
     },
-    "Newtonsoft.Json/6.0.6": {
+    "Newtonsoft.Json/7.0.1": {
       "type": "package",
-      "sha512": "w26uZNyCG5VeoKiEOJ4+9/o8koSofLKwHl7WLreIcp0U6r57L7WiRXmjp8MTKFw6dYNZ9AE0lw69WYbIhUsU9Q==",
+      "sha512": "q3V4KLetMLnt1gpAVWgtXnHjKs0UG/RalBc29u2ZKxd5t5Ze4JBL5WiiYIklJyK/5CRiIiNwigVQUo0FgbsuWA==",
       "files": [
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -2780,14 +3030,12 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
-        "lib/netcore45/Newtonsoft.Json.dll",
-        "lib/netcore45/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
-        "Newtonsoft.Json.6.0.6.nupkg",
-        "Newtonsoft.Json.6.0.6.nupkg.sha512",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
+        "Newtonsoft.Json.7.0.1.nupkg",
+        "Newtonsoft.Json.7.0.1.nupkg.sha512",
         "Newtonsoft.Json.nuspec",
         "tools/install.ps1"
       ]
@@ -2825,7 +3073,7 @@
     "System.Diagnostics.DiagnosticSource/4.0.0-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "WHVhr5/p8UDjqNV7l9PCxZgOufE2tO4XOWva9pau9c7PzJJTdB1By6scO5dgHLpmlB/u4y27Y9AzT8AqtG8sxw==",
+      "sha512": "0uDR/UOmFCNPDCyHEPHhCrk6c1iRnDp00YqwSZ8Qf5aaaJjm4WXnf4Q9xZw4OoApsSiODSypDMdpQU24IxR16A==",
       "files": [
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.dll",
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.xml",
@@ -2885,7 +3133,7 @@
     "System.Numerics.Vectors/4.1.1-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "jphbCfQB30LZBC/8kNQtAaaCcKzCFIFnRyUvYapNOozvleUvwI6sYG9d3/WamMcalnNcHDgIlQ713QOv9aweVA==",
+      "sha512": "FCYCEjc3BXBTpVZTxMqf2m/sGYyDzLwICy5lNKgZzT8WfshJhsTGjJuETwsh1Cwi6bksw9YiTB6yeeWBBJDnTA==",
       "files": [
         "lib/dotnet5.4/System.Numerics.Vectors.dll",
         "lib/MonoAndroid10/_._",
@@ -3006,13 +3254,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.AspNet.Server.Kestrel >= 1.0.0-*",
-      "Microsoft.Extensions.Logging.Console >= 1.0.0-*",
-      "Microsoft.AspNet.Hosting >= 1.0.0-*",
-      "EntityFramework.InMemory >= 7.0.0-*",
-      "Bolt.Client >= 0.21.0-alpha1",
-      "Bolt.Core >= 0.21.0-alpha1",
-      "Bolt.Server >= 0.21.0-alpha1"
+      "Microsoft.AspNet.Server.Kestrel >= 1.0.0-rc1-final",
+      "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
+      "Microsoft.AspNet.Hosting >= 1.0.0-rc1-final",
+      "EntityFramework.InMemory >= 7.0.0-rc1-final",
+      "Bolt.Server >= 0.30.0-alpha1"
     ],
     "DNX,Version=v4.5.1": []
   }

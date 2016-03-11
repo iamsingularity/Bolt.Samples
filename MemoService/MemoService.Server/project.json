@@ -2,11 +2,11 @@
   "version": "1.0.0-*",
   "compileFiles": [ "..\\MemoService.Contracts\\IMemoService.cs" ],
   "dependencies": {
-    "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
-    "Microsoft.Extensions.Logging.Console": "1.0.0-*",
-    "Microsoft.AspNet.Hosting": "1.0.0-*",
-    "Bolt.Server": "0.21.0-alpha1",
-    "EntityFramework.InMemory": "7.0.0-*"
+    "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
+    "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
+    "Bolt.Server": "0.30.0-alpha1",
+    "EntityFramework.InMemory": "7.0.0-rc1-final"
   },
   "frameworks": {
     "dnx451": {

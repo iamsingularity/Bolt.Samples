@@ -1,7 +1,6 @@
 ﻿using System.Threading;
 
 using Bolt.Client;
-using Bolt.Client.Proxy;
 using ContactList.Contracts;
 
 namespace ContactList.Console
@@ -10,7 +9,7 @@ namespace ContactList.Console
     {
         static void Main(string[] args)
         {
-            ClientConfiguration configuration = new ClientConfiguration().UseDynamicProxy();
+            ClientConfiguration configuration = new ClientConfiguration();
             IContactListProvider proxy = configuration.CreateProxy<IContactListProvider>("http://localhost:5000");
             proxy.GetContactsAsync(CancellationToken.None).GetAwaiter().GetResult();
 

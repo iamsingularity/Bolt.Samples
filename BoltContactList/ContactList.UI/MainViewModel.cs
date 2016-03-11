@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using Bolt.Client;
-using Bolt.Client.Proxy;
 using ContactList.Contracts;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
@@ -18,7 +17,7 @@ namespace ContactList.UI
 
         public MainViewModel()
         {
-            ClientConfiguration clientConfiguration = new ClientConfiguration().UseDynamicProxy();
+            ClientConfiguration clientConfiguration = new ClientConfiguration();
 
             _proxy = clientConfiguration.CreateProxy<IContactListProvider>("http://localhost:5000");
             Contacts = new ObservableCollection<Contact>();

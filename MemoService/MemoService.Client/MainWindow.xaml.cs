@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 
 using Bolt.Client;
-using Bolt.Client.Proxy;
 
 namespace MemoService.Client
 {
@@ -13,7 +12,7 @@ namespace MemoService.Client
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel(new ClientConfiguration().UseDynamicProxy());
+            DataContext = new MainViewModel(new ClientConfiguration());
         }
     }
 }

@@ -3,7 +3,7 @@
   "version": 2,
   "targets": {
     "DNX,Version=v4.5.1": {
-      "Bolt.Core/0.19.0-alpha1": {
+      "Bolt.Core/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "7.0.1"
@@ -15,18 +15,12 @@
           "System.Core",
           "System.Net.Http",
           "System.Runtime.Serialization"
-        ],
-        "compile": {
-          "lib/net451/Bolt.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Bolt.Core.dll": {}
-        }
+        ]
       },
-      "Bolt.Server/0.20.0-alpha1": {
+      "Bolt.Server/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
-          "Bolt.Core": "0.19.0-alpha1",
+          "Bolt.Core": "0.30.0-alpha1",
           "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
@@ -46,13 +40,7 @@
           "System",
           "System.Core",
           "System.Net.Http"
-        ],
-        "compile": {
-          "lib/net451/Bolt.Server.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Bolt.Server.dll": {}
-        }
+        ]
       },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "type": "package",
@@ -821,7 +809,7 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x86": {
-      "Bolt.Core/0.19.0-alpha1": {
+      "Bolt.Core/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "7.0.1"
@@ -833,18 +821,12 @@
           "System.Core",
           "System.Net.Http",
           "System.Runtime.Serialization"
-        ],
-        "compile": {
-          "lib/net451/Bolt.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Bolt.Core.dll": {}
-        }
+        ]
       },
-      "Bolt.Server/0.20.0-alpha1": {
+      "Bolt.Server/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
-          "Bolt.Core": "0.19.0-alpha1",
+          "Bolt.Core": "0.30.0-alpha1",
           "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
@@ -864,13 +846,7 @@
           "System",
           "System.Core",
           "System.Net.Http"
-        ],
-        "compile": {
-          "lib/net451/Bolt.Server.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Bolt.Server.dll": {}
-        }
+        ]
       },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "type": "package",
@@ -1642,7 +1618,7 @@
       }
     },
     "DNX,Version=v4.5.1/win7-x64": {
-      "Bolt.Core/0.19.0-alpha1": {
+      "Bolt.Core/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "7.0.1"
@@ -1654,18 +1630,12 @@
           "System.Core",
           "System.Net.Http",
           "System.Runtime.Serialization"
-        ],
-        "compile": {
-          "lib/net451/Bolt.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Bolt.Core.dll": {}
-        }
+        ]
       },
-      "Bolt.Server/0.20.0-alpha1": {
+      "Bolt.Server/0.30.0-alpha1": {
         "type": "package",
         "dependencies": {
-          "Bolt.Core": "0.19.0-alpha1",
+          "Bolt.Core": "0.30.0-alpha1",
           "Microsoft.AspNet.Hosting.Abstractions": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Abstractions": "1.0.0-rc1-final",
           "Microsoft.AspNet.Http.Extensions": "1.0.0-rc1-final",
@@ -1685,13 +1655,7 @@
           "System",
           "System.Core",
           "System.Net.Http"
-        ],
-        "compile": {
-          "lib/net451/Bolt.Server.dll": {}
-        },
-        "runtime": {
-          "lib/net451/Bolt.Server.dll": {}
-        }
+        ]
       },
       "EntityFramework.Core/7.0.0-rc1-final": {
         "type": "package",
@@ -2464,30 +2428,38 @@
     }
   },
   "libraries": {
-    "Bolt.Core/0.19.0-alpha1": {
+    "Bolt.Core/0.30.0-alpha1": {
       "type": "package",
-      "sha512": "DoZASaWqclZ5Lr0jZhxN5spY4V76Q5bDtS7TiuwcWSWYUn3zU4n6Fmkc7BmWzvK/bCxKbixOpIEM9tZk5DUCnw==",
+      "sha512": "yh1zsvcwv2iLa4a1HmJryPqD8ToeYw5Ni1HgEloyNJiEah8R4yqjBhtGfSVy7kP4W0SHcW+o/Ct2iROcfYXd4A==",
       "files": [
-        "Bolt.Core.0.19.0-alpha1.nupkg",
-        "Bolt.Core.0.19.0-alpha1.nupkg.sha512",
+        "Bolt.Core.0.30.0-alpha1.nupkg",
+        "Bolt.Core.0.30.0-alpha1.nupkg.sha512",
         "Bolt.Core.nuspec",
-        "lib/dotnet5.4/Bolt.Core.dll",
-        "lib/dotnet5.4/Bolt.Core.xml",
-        "lib/net451/Bolt.Core.dll",
-        "lib/net451/Bolt.Core.xml"
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.dll",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.xml",
+        "lib/net451/net451/Bolt.Client.dll",
+        "lib/net451/net451/Bolt.Client.xml",
+        "lib/net451/net451/Bolt.Core.dll",
+        "lib/net451/net451/Bolt.Core.xml"
       ]
     },
-    "Bolt.Server/0.20.0-alpha1": {
+    "Bolt.Server/0.30.0-alpha1": {
       "type": "package",
-      "sha512": "4ji8gL1dZKEhVFT9tNaH1k11LU6fEaB6uLfPGirHbAz0X4N6P1aw7zN0n6cnI5JZ6RmJPTYMLhZBYZ6tSlwk6Q==",
+      "sha512": "yDW8Lqk0VyeyvDIaM2+hc1a8hNBZoldRBFKbpWEZrFPX8cUb+atJVVKRn5bjSQ6GlaAWN/XaahBSwaTi49GGGg==",
       "files": [
-        "Bolt.Server.0.20.0-alpha1.nupkg",
-        "Bolt.Server.0.20.0-alpha1.nupkg.sha512",
+        "Bolt.Server.0.30.0-alpha1.nupkg",
+        "Bolt.Server.0.30.0-alpha1.nupkg.sha512",
         "Bolt.Server.nuspec",
-        "lib/dotnet5.4/Bolt.Server.dll",
-        "lib/dotnet5.4/Bolt.Server.xml",
-        "lib/net451/Bolt.Server.dll",
-        "lib/net451/Bolt.Server.xml"
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.dll",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Core.xml",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Server.dll",
+        "lib/dotnet5.4/dotnet5.4/Bolt.Server.xml",
+        "lib/net451/net451/Bolt.Client.dll",
+        "lib/net451/net451/Bolt.Client.xml",
+        "lib/net451/net451/Bolt.Core.dll",
+        "lib/net451/net451/Bolt.Core.xml",
+        "lib/net451/net451/Bolt.Server.dll",
+        "lib/net451/net451/Bolt.Server.xml"
       ]
     },
     "EntityFramework.Core/7.0.0-rc1-final": {
@@ -3101,7 +3073,7 @@
     "System.Diagnostics.DiagnosticSource/4.0.0-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "WHVhr5/p8UDjqNV7l9PCxZgOufE2tO4XOWva9pau9c7PzJJTdB1By6scO5dgHLpmlB/u4y27Y9AzT8AqtG8sxw==",
+      "sha512": "0uDR/UOmFCNPDCyHEPHhCrk6c1iRnDp00YqwSZ8Qf5aaaJjm4WXnf4Q9xZw4OoApsSiODSypDMdpQU24IxR16A==",
       "files": [
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.dll",
         "lib/dotnet5.2/System.Diagnostics.DiagnosticSource.xml",
@@ -3161,7 +3133,7 @@
     "System.Numerics.Vectors/4.1.1-beta-23516": {
       "type": "package",
       "serviceable": true,
-      "sha512": "jphbCfQB30LZBC/8kNQtAaaCcKzCFIFnRyUvYapNOozvleUvwI6sYG9d3/WamMcalnNcHDgIlQ713QOv9aweVA==",
+      "sha512": "FCYCEjc3BXBTpVZTxMqf2m/sGYyDzLwICy5lNKgZzT8WfshJhsTGjJuETwsh1Cwi6bksw9YiTB6yeeWBBJDnTA==",
       "files": [
         "lib/dotnet5.4/System.Numerics.Vectors.dll",
         "lib/MonoAndroid10/_._",
@@ -3282,11 +3254,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "Microsoft.AspNet.Server.Kestrel >= 1.0.0-*",
-      "Microsoft.Extensions.Logging.Console >= 1.0.0-*",
-      "Microsoft.AspNet.Hosting >= 1.0.0-*",
-      "Bolt.Server >= 0.20.0-alpha1",
-      "EntityFramework.InMemory >= 7.0.0-*"
+      "Microsoft.AspNet.Server.Kestrel >= 1.0.0-rc1-final",
+      "Microsoft.Extensions.Logging.Console >= 1.0.0-rc1-final",
+      "Microsoft.AspNet.Hosting >= 1.0.0-rc1-final",
+      "Bolt.Server >= 0.30.0-alpha1",
+      "EntityFramework.InMemory >= 7.0.0-rc1-final"
     ],
     "DNX,Version=v4.5.1": []
   }
