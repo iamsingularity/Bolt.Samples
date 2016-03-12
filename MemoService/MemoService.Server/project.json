@@ -5,8 +5,8 @@
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
-    "Bolt.Server": "0.30.0-alpha1",
-    "EntityFramework.InMemory": "7.0.0-rc1-final"
+    "EntityFramework.InMemory": "7.0.0-rc1-final",
+    "Bolt.Server": "0.33.0-alpha1"
   },
   "frameworks": {
     "dnx451": {

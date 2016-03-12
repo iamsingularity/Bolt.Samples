@@ -6,7 +6,8 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.AspNet.Hosting": "1.0.0-rc1-final",
     "EntityFramework.InMemory": "7.0.0-rc1-final",
-    "Bolt.Server": "0.30.0-alpha1"
+    "Bolt.Core": "0.33.0-alpha1",
+    "Bolt.Server": "0.33.0-alpha1"
   },
   "commands": {
     "run": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --server.urls http://localhost:5000"
