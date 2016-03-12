@@ -14,6 +14,7 @@ namespace ContactList.UI
         private Contact _selectedContact;
         private string _name;
         private string _surname;
+        private bool _isExecuting;
 
         public MainViewModel()
         {
@@ -24,26 +25,54 @@ namespace ContactList.UI
 
             AddContactCommand = new RelayCommand(async () =>
             {
-                Contact contact = await _proxy.AddContactAsync(new Contact { Name = Name, Surname = Surname }, CancellationToken.None);
-                Contacts.Add(contact);
-            }, () => !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(Surname));
+                try
+                {
+                    IsExecuting = true;
+                    Contact contact =
+                        await
+                            _proxy.AddContactAsync(new Contact {Name = Name, Surname = Surname}, CancellationToken.None);
+                    Contacts.Add(contact);
+                }
+                finally
+                {
+                    IsExecuting = false;
+                }
+
+            }, () => !string.IsNullOrEmpty(Name) && !string.IsNullOrEmpty(Surname) && !IsExecuting);
 
             RemoveContactCommand = new RelayCommand(async () =>
             {
-                await _proxy.DeleteContactAsync(SelectedContact.Id, CancellationToken.None);
-                Contacts.Remove(SelectedContact);
-            }, () => SelectedContact != null);
+                try
+                {
+
+                    await _proxy.DeleteContactAsync(SelectedContact.Id, CancellationToken.None);
+                    Contacts.Remove(SelectedContact);
+                }
+                finally
+                {
+                    IsExecuting = false;
+                }
+
+            }, () => SelectedContact != null && !IsExecuting);
 
             LoadContactsCommand = new RelayCommand(async () =>
             {
-                List<Contact> contacts = await _proxy.GetContactsAsync(CancellationToken.None);
-                Contacts.Clear();
-
-                foreach (Contact contact in contacts)
+                try
                 {
-                    Contacts.Add(contact);
+                    List<Contact> contacts = await _proxy.GetContactsAsync(CancellationToken.None);
+                    Contacts.Clear();
+
+                    foreach (Contact contact in contacts)
+                    {
+                        Contacts.Add(contact);
+                    }
                 }
-            });
+                finally
+                {
+                    IsExecuting = false;
+                }
+
+            }, () => !IsExecuting);
         }
 
         public string Name
@@ -79,6 +108,18 @@ namespace ContactList.UI
             }
         }
 
+        private bool IsExecuting
+        {
+            get { return _isExecuting; }
+            set
+            {
+                _isExecuting = value;
+                RemoveContactCommand.RaiseCanExecuteChanged();
+                AddContactCommand.RaiseCanExecuteChanged();
+                LoadContactsCommand.RaiseCanExecuteChanged();
+            }
+        }
+
         public ObservableCollection<Contact> Contacts { get; set; }
 
         public RelayCommand AddContactCommand { get; set; }
@@ -86,8 +127,5 @@ namespace ContactList.UI
         public RelayCommand RemoveContactCommand { get; set; }
 
         public RelayCommand LoadContactsCommand { get; set; }
-
-
-
     }
 }

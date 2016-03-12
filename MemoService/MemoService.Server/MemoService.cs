@@ -1,38 +1,56 @@
 ﻿using System.Collections.Generic;
-
+using System.Threading.Tasks;
+using Bolt;
+using Bolt.Server;
+using Bolt.Server.Session;
 using MemoService.Contracts;
+using Microsoft.Extensions.Logging;
 
 namespace MemoService.Server
 {
     public class MemoService : IMemoService
     {
+        private readonly ISessionProvider _sessionProvider;
+        private readonly ILogger<MemoService> _logger;
         private readonly List<string> _memos = new List<string>();
 
         private string _user;
 
-        public void Login(string userName)
+        public MemoService(ISessionProvider sessionProvider, ILogger<MemoService> logger)
         {
-            _user = userName;
+            _sessionProvider = sessionProvider;
+            _logger = logger;
         }
 
-        public void AddMemo(string memo)
+        public Task LoginAsync(string userName)
+        {
+            _logger.LogInformation("Login: {0}, Session: {1}", userName, _sessionProvider.SessionId);
+            _user = userName;
+            return Task.FromResult(true);
+        }
+
+        public Task AddMemoAsync(string memo)
         {
             _memos.Add(memo);
+            return Task.FromResult(true);
         }
 
-        public void RemoveMemo(string memo)
+        public Task RemoveMemoAsync(string memo)
         {
             _memos.Remove(memo);
+            return Task.FromResult(true);
         }
 
-        public List<string> GetAllMemos()
+        public Task<List<string>> GetAllMemosAsync()
         {
-            return _memos;
+            return Task.FromResult(_memos);
         }
 
-        public void Logoff()
+        public Task LogoffAsync()
         {
+            _logger.LogInformation("Logout: {0}, Session: {1}", _user, _sessionProvider.SessionId);
             _user = null;
+            return Task.FromResult(true);
         }
     }
 }

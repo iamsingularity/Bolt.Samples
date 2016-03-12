@@ -1,14 +1,11 @@
 ﻿using System.ComponentModel;
-using System.Windows;
 
-using MemoService.Client;
-
-namespace Client
+namespace MemoService.Client
 {
     /// <summary>
     /// Interaction logic for SessionWindow.xaml
     /// </summary>
-    public partial class SessionWindow : Window
+    public partial class SessionWindow
     {
         public SessionWindow()
         {
@@ -18,10 +15,7 @@ namespace Client
         protected override void OnClosing(CancelEventArgs e)
         {
             SessionViewModel vm = DataContext as SessionViewModel;
-            if (vm != null)
-            {
-                vm.Cleanup();
-            }
+            vm?.Cleanup();
 
             base.OnClosing(e);
         }

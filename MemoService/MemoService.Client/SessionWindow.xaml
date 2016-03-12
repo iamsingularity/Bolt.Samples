@@ -1,6 +1,8 @@
-﻿<Window x:Class="Client.SessionWindow"
+﻿<controls:MetroWindow x:Class="MemoService.Client.SessionWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        GlowBrush="Black"
         Title="{Binding Path=User}" Height="378" Width="507">
     <Grid>
         <ListBox Margin="10,62,10,52" ItemsSource="{Binding Path=Memos}"/>
@@ -13,4 +15,4 @@
         <Button Content="Test Performance" Command="{Binding Path=TestCommand}" HorizontalAlignment="Left" Margin="301,0,0,23" Width="131" Height="22" VerticalAlignment="Bottom"/>
         <Label Content="times" HorizontalAlignment="Left" Margin="242,0,0,21" Height="26" VerticalAlignment="Bottom" Width="54"/>
     </Grid>
-</Window>
+</controls:MetroWindow>

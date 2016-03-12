@@ -1,20 +1,21 @@
 ﻿using Bolt;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MemoService.Contracts
 {
     public interface IMemoService
     {
         [InitSession]
-        void Login(string userName);
+        Task LoginAsync(string userName);
 
-        void AddMemo(string memo);
+        Task AddMemoAsync(string memo);
 
-        void RemoveMemo(string memo);
+        Task RemoveMemoAsync(string memo);
 
-        List<string> GetAllMemos();
+        Task<List<string>> GetAllMemosAsync();
 
         [DestroySession]
-        void Logoff();
+        Task LogoffAsync();
     }
 }

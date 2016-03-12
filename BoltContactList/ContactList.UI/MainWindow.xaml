@@ -1,6 +1,8 @@
-﻿<Window x:Class="Client.UI.MainWindow"
+﻿<controls:MetroWindow x:Class="ContactList.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        GlowBrush="Black"
         Title="Contacts" Height="355" Width="647">
     <Grid>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.184,0.615"/>
@@ -25,4 +27,5 @@
         <Button Command="{Binding Path=LoadContactsCommand}" Content="Load" HorizontalAlignment="Left" Margin="501,12,0,0" VerticalAlignment="Top" Width="87"/>
 
     </Grid>
-</Window>
+</controls:MetroWindow>
+

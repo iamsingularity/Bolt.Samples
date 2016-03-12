@@ -25,25 +25,24 @@ namespace MemoService.Client
                 configuration.ProxyBuilder()
                     .Url("http://localhost:5000")
                     .UseSession()
-                    .Recoverable(10, TimeSpan.FromSeconds(1))
+                    .Recoverable(5, TimeSpan.FromSeconds(1))
                     .Build<IMemoService>();
-            _proxy.Login(user);
 
             Memos = new ObservableCollection<string>();
 
-            LoadCommand = new RelayCommand(() =>
+            LoadCommand = new RelayCommand(async () =>
             {
                 Memos.Clear();
 
-                foreach (string memo in _proxy.GetAllMemos())
+                foreach (string memo in await _proxy.GetAllMemosAsync())
                 {
                     Memos.Add(memo);
                 }
             });
 
-            AddCommand = new RelayCommand(() =>
+            AddCommand = new RelayCommand(async () =>
             {
-                _proxy.AddMemo(Memo);
+                await _proxy.AddMemoAsync(Memo);
                 Memos.Add(Memo);
             }, () => !string.IsNullOrEmpty(Memo));
 
@@ -51,20 +50,25 @@ namespace MemoService.Client
             {
                 int repeats = Repeats;
 
-                long elapsed = await Task.Run(() =>
+                long elapsed = await Task.Run(async () =>
                 {
                     Stopwatch watch = Stopwatch.StartNew();
 
                     for (int i = 0; i < repeats; i++)
                     {
-                        _proxy.GetAllMemos();
+                        await _proxy.GetAllMemosAsync();
                     }
 
                     return watch.ElapsedMilliseconds;
                 });
 
-                MessageBox.Show(string.Format("Requesting all memos {0} times has taken {1}ms.", repeats, elapsed), "Performance Result", MessageBoxButton.OK);
+                MessageBox.Show($"Requesting all memos {repeats} times has taken {elapsed}ms.", "Performance Result", MessageBoxButton.OK);
             });
+        }
+
+        public Task LoginAsync()
+        {
+            return _proxy.LoginAsync(User);
         }
 
         public ObservableCollection<string> Memos { get; set; }

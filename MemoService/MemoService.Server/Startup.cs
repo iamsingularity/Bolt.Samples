@@ -19,7 +19,7 @@ namespace MemoService.Server
 
         public void Configure(IApplicationBuilder app)
         {
-            app.ApplicationServices.GetRequiredService<ILoggerFactory>().AddConsole(LogLevel.Debug);
+            app.ApplicationServices.GetRequiredService<ILoggerFactory>().AddConsole(LogLevel.Information);
             app.UseBolt(
                 b =>
                     {
